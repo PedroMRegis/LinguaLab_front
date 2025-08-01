@@ -74,7 +74,7 @@ export const Homepage: React.FC = () => {
     const fetchDadosDaApi = async () => {
       try {
         const [resAulas, resBase] = await Promise.all([
-          fetch("http://localhost:8000/"),
+          fetch("http://localhost:8000/aulas"),
           fetch("http://localhost:8000/base"),
         ]);
 
