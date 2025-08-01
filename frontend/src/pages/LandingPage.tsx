@@ -141,7 +141,7 @@ export const Homepage: React.FC = () => {
     );
   }, [aulasFiltradas]);
 
-  const clientesAtivos = idsFiltrados.size;
+  const clientesAtendidos = idsFiltrados.size;
   const totalAulas = aulasFiltradas.length;
   const tiposDisponiveis = useMemo(() => [...new Set(aulas.map(a => a.tipo))], [aulas]);
 
@@ -164,7 +164,7 @@ export const Homepage: React.FC = () => {
           <MetricsGrid>
             <Card title="Faturamento Total" value={`R$ ${faturamentoTotal.toLocaleString("pt-BR", { minimumFractionDigits: 2 })}`} />
             <Card title="NPS Médio" value={npsFiltrado.toFixed(2)} />
-            <Card title="Clientes Ativos" value={clientesAtivos.toString()} />
+            <Card title="Clientes Atendidos" value={clientesAtendidos.toString()} />
             <Card title="Aulas Vendidas" value={totalAulas.toString()} />
           </MetricsGrid>
 
